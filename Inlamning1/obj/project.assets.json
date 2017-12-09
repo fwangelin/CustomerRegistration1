@@ -12543,11 +12543,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fredrik\\Desktop\\YHSUST16\\Avancerad ASP.NET\\Inlämningsuppgifter\\Inlamning1\\Inlamning1\\Inlamning1.csproj",
+      "projectUniqueName": "C:\\Users\\Fredrik\\Desktop\\inlämning1\\CustomerRegistration1\\Inlamning1\\Inlamning1.csproj",
       "projectName": "Inlamning1",
-      "projectPath": "C:\\Users\\Fredrik\\Desktop\\YHSUST16\\Avancerad ASP.NET\\Inlämningsuppgifter\\Inlamning1\\Inlamning1\\Inlamning1.csproj",
+      "projectPath": "C:\\Users\\Fredrik\\Desktop\\inlämning1\\CustomerRegistration1\\Inlamning1\\Inlamning1.csproj",
       "packagesPath": "C:\\Users\\Fredrik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fredrik\\Desktop\\YHSUST16\\Avancerad ASP.NET\\Inlämningsuppgifter\\Inlamning1\\Inlamning1\\obj\\",
+      "outputPath": "C:\\Users\\Fredrik\\Desktop\\inlämning1\\CustomerRegistration1\\Inlamning1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

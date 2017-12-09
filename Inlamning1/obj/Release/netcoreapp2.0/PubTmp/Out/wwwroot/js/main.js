@@ -1,4 +1,8 @@
-﻿
+﻿$(".reloadPage").click( () => {
+    location.reload();
+});
+
+
 $("#addForm button").click(() => {
 
     $.ajax({
@@ -28,7 +32,7 @@ $("#addForm button").click(() => {
         })
 });
 
-$("#GetCustomersForm button").click(() => {
+$("#GetCustomersForm").ready(() => {
 
     $.ajax({
         url: '/api/Customers/GetCustomers',
@@ -54,7 +58,7 @@ $("#GetCustomersForm button").click(() => {
                 table.append('<td>' + '<button value="' + item.id + '"onclick="Delete(this.value)">Delete</button>' + '</td>');
                 $('#info').append(table);
             }
-
+            
         })
 
         .fail((xhr, status, error) => {
@@ -64,6 +68,8 @@ $("#GetCustomersForm button").click(() => {
 
 
         })
+
+    
 });
 
 function Delete(id) {
@@ -93,7 +99,7 @@ function Delete(id) {
 
 
 
-$("#buttonEditCustomer").click(function () {
+$("#buttonEditCustomer").click( () => {
 
     $.ajax({
         url: '/api/Customers/',

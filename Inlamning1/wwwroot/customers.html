@@ -9,97 +9,117 @@
 
 
 </head>
-<body>
+    <body onload="GetCustomersForm()">
 
-    <div id="addForm" class="form-group">
-        <ul class="list-group">
-            <li class="list-group-item">
-                <input name="FirstName" placeholder="Name" class="form-control" />
-            </li>
-            <li class="list-group-item">
-                <input name="LastName" placeholder="Last name" class="form-control"/>
-            </li>
-            <li class="list-group-item">
-                <input name="Email" placeholder="Email" class="form-control"/>
-            </li>
-            <li class="list-group-item">
-                <input name="Age" placeholder="Age" class="form-control"/>
-            </li>
-            <li class="list-group-item">
-                <select name="Gender" class="form-control" width="50%">
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Other">Other</option>
-                </select>
-            </li>
-            <li class="list-group-item">
-                <button class="btn btn-primary">Add Customer</button>
-            </li>
-        </ul>
-    </div>
+        <div id="addForm" class="form-group">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <input name="FirstName" placeholder="Name" class="form-control" />
+                </li>
+                <li class="list-group-item">
+                    <input name="LastName" placeholder="Last name" class="form-control" />
+                </li>
+                <li class="list-group-item">
+                    <input name="Email" placeholder="Email" class="form-control" />
+                </li>
+                <li class="list-group-item">
+                    <input name="Age" placeholder="Age" class="form-control" />
+                </li>
+                <li class="list-group-item">
+                    <select name="Gender" class="form-control" width="50%">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </li>
+                <li class="list-group-item">
+                    <button class="btn btn-primary center-block">Add Customer</button>
+                </li>
+            </ul>
+        </div>
 
-    <div id="GetCustomersForm" class="form-group">
-        <button class="btn btn-primary">Get all customers</button>
-        <table id="info" class="table table-hover table-bordered">
-            <tr>
-                <th >Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>Age</th>
-                <th>Sex</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
+        <div class="form-group reloadPage">
+            <button class="btn btn-primary center-block">Reload Customer List</button>
+            </div>
+            <table id="info" class="table table-hover table-bordered">
+                <tr>
+                    <th>Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>Sex</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
 
-        </table>
-    </div>
+            </table>
+      
 
-    <div class="modal fade" id="editCustomerButtonModal" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Edit customer</h4>
-                </div>
-                <div class="modal-body">
+        <div class="modal fade" id="editCustomerButtonModal" role="dialog">
+            <div class="modal-dialog">
 
 
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Edit customer</h4>
+                    </div>
+                    <div class="modal-body">
 
-                    <div id="editForm">
 
-                        <table>
-                            <tr>
-                                <td><input class="textBoxes" id="editTxtFirstName" type="text" name="FirstName" /></td>
-                                <td><input class="textBoxes" id="editTxtLastName" type="text" name="LastName" /></td>
-                                <td><input class="textBoxes" id="editTxtEmail" type="text" name="Email" /></td>
-                            </tr>
-                            <tr>
-                                <td><input class="textBoxes" id="editTxtAge" type="text" name="Age" /></td>
-                                <td><input class="textBoxes" id="editTxtGender" type="text" name="Gender" /></td>
-                            </tr>
 
-                        </table>
+                        <div id="editForm">
+
+                            <table>
+                                <tr>
+                                    <td>
+                                        <label>First Name</label>
+                                        <input class="textBoxes form-control" id="editTxtFirstName" type="text" name="FirstName" />
+                                    </td>
+                                    <td>
+                                        <label>Last Name</label>
+                                        <input class="textBoxes form-control" id="editTxtLastName" type="text" name="LastName" />
+                                    </td>
+                                    <td>
+                                        <label>Email</label>
+                                        <input class="textBoxes form-control" id="editTxtEmail" type="text" name="Email" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Age</label>
+                                        <input class="textBoxes form-control" id="editTxtAge" type="text" name="Age" />
+                                    </td>
+                                    <td>
+                                        <label>Gender</label>
+                                        <select name="Gender" class="form-control" width="50%">
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </td>
+                                </tr>
+
+                            </table>
+
+                        </div>
 
                     </div>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal" id="buttonEditCustomer">Edit customer</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="buttonEditCustomer">Edit customer</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
-    <script src="js/main.js"></script>
-</body>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+                integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+        <script src="js/main.js"></script>
+    </body>
 </html>
